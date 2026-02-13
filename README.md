@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# Smart Web Annotator  
+### A Chrome Extension for Structured Visual Feedback on Live Webpages
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Smart Web Annotator is a Chrome Extension built using **React, Canvas API, and Chrome Manifest V3** that allows users to capture, annotate, and export visual feedback directly from live webpages.
 
-In the project directory, you can run:
+Instead of sending vague bug reports or scattered screenshots, this tool enables structured visual communication - making debugging and collaboration faster and clearer.
 
-### `npm start`
+This project demonstrates practical frontend engineering skills including:
+- React state-driven architecture
+- Canvas rendering logic
+- Chrome Extension API usage
+- Undo/Redo stack implementation
+- Annotation layering system
+- Multi-format export (PNG + JSON)
+- Manifest V3 service worker handling
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# The Real-World Problem
+In real development workflows:
+- Designers send static screenshots in chat.
+- QA teams describe UI issues without precise visual markers.
+- Developers receive unclear feedback like: “The layout is broken.”
+- Stakeholders struggle to communicate exact UI changes.
 
-### `npm test`
+This causes:
+- Miscommunication  
+- Delayed debugging  
+- Back-and-forth clarification  
+- Reduced productivity  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There is often no structured connection between visual feedback and actual UI elements.
 
-### `npm run build`
+# How Smart Web Annotator Solves This
+This extension enables users to:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Capture the Current Webpage
+Instantly take a screenshot of the active tab.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Add Structured Visual Annotations
+- Rectangle selection
+- Arrow indicators
+- Free drawing tool
+- Highlight tool
+- Blur tool (for sensitive data)
+- Styled text (custom color, font, size, bold)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Maintain an Annotation Layer System
+Annotations are stored as structured objects which enables:
+- Clean state-driven re-rendering
+- Undo/Redo functionality
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Export & Save
+Users can:
+- Download as PNG
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Tech Stack
+React (Create React App)
+JavaScript (ES6+)
+HTML5 Canvas API
+Chrome Extension APIs
+Manifest V3
+CSS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Installation & Setup
+Clone the Repository
+git clone https://github.com/KolaganiReeha/smart-web-annotator.git
+cd smart-web-annotator
 
-## Learn More
+### Install Dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Build the Extension
+npm run build
+This generates the production-ready /build folder.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Load Extension in Chrome
 
-### Code Splitting
+Open: chrome://extensions
+Enable: Developer Mode
+Click: Load Unpacked
+Select: build/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### How to Use
+Open any website.
+Click the Smart Web Annotator extension icon.
+Capture the current page.
 
-### Analyzing the Bundle Size
+### Use annotation tools:
+Draw rectangles
+Add arrows
+Highlight UI sections
+Blur sensitive information
+Add styled text
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Export:
+Download PNG
+Save session
 
-### Making a Progressive Web App
+### What This Project Demonstrates
+Real-world browser extension development
+Advanced frontend state management
+Canvas graphics handling
+Structured problem-solving
+UX-focused engineering
+Clean architectural thinking
+It is not just a drawing tool - it is a structured visual collaboration utility.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Future Improvements
+AI-generated bug reports
+Editable annotations (drag/resize)
+Multi-page PDF export
+Cloud session sync
+Shareable review links
+Team collaboration mode
 
-### Advanced Configuration
+### Author
+Built as a practical frontend engineering project to demonstrate real-world browser extension development and structured UI feedback systems.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If You Found This Useful
+Consider starring the repository and connecting with me on LinkedIn.
