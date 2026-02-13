@@ -120,6 +120,10 @@ It is not just a drawing tool - it is a structured visual collaboration utility.
 
 This ensures clean separation between state and rendering logic.
 
+### Demo
+<img width="1918" height="853" alt="image" src="https://github.com/user-attachments/assets/11da5883-3f14-4e8d-b203-fb7b41439d1b" />
+
+
 ### Future Improvements
 AI-generated bug reports
 Editable annotations (drag/resize)
