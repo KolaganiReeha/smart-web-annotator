@@ -67,9 +67,9 @@ CSS
 
 ### Installation & Setup
 Clone the Repository
-git clone https://github.com/KolaganiReeha/ChromeExtension
+git clone https://github.com/KolaganiReeha/smart-web-annotator
 
-cd chrome-extension
+cd smart-web-annotator
 
 ### Install Dependencies
 npm install
