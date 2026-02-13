@@ -69,15 +69,18 @@ CSS
 Clone the Repository
 ```bash
 git clone https://github.com/KolaganiReeha/smart-web-annotator
-
 cd smart-web-annotator
 ```
 
 ### Install Dependencies
+```bash
 npm install
+```
 
 ### Build the Extension
+```bash
 npm run build
+```
 This generates the production-ready /build folder.
 
 ### Load Extension in Chrome
