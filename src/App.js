@@ -43,6 +43,26 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+  const canvas = canvasRef.current;
+  if (!canvas) return;
+
+  switch (tool) {
+    case TOOLS.TEXT:
+      canvas.style.cursor = "text";
+      break;
+    case TOOLS.FREE:
+    case TOOLS.RECT:
+    case TOOLS.ARROW:
+    case TOOLS.HIGHLIGHT:
+    case TOOLS.BLUR:
+      canvas.style.cursor = "crosshair";
+      break;
+    default:
+      canvas.style.cursor = "default";
+  }
+}, [tool]);
+
   // REDRAW WHEN ANNOTATIONS CHANGE
   useEffect(() => {
     if (baseImage) {
@@ -248,14 +268,35 @@ function App() {
     <div>
       <div className="toolbar">
         {Object.values(TOOLS).map((t) => (
-          <button key={t} onClick={() => setTool(t)}>
+          <button
+            key={t}
+            title={t}
+            className={`tool-btn ${tool === t ? "active" : ""}`}
+            onClick={() => setTool(t)}
+          >
             {t}
           </button>
         ))}
-        <button onClick={undo}>Undo</button>
-        <button onClick={redo}>Redo</button>
-        <button onClick={saveSession}>Save</button>
-        <button onClick={downloadPNG}>Download PNG</button>
+
+        <div className="divider" />
+
+        <button title="Undo" className="tool-btn" onClick={undo}>
+          ↺
+        </button>
+
+        <button title="Redo" className="tool-btn" onClick={redo}>
+          ↻
+        </button>
+
+        <div className="divider" />
+
+        <button title="Save Session" className="tool-btn" onClick={saveSession}>
+          💾
+        </button>
+
+        <button title="Download PNG" className="tool-btn" onClick={downloadPNG}>
+          ⬇
+        </button>
       </div>
 
       <canvas
