@@ -67,9 +67,11 @@ CSS
 
 ### Installation & Setup
 Clone the Repository
+```bash
 git clone https://github.com/KolaganiReeha/smart-web-annotator
 
 cd smart-web-annotator
+```
 
 ### Install Dependencies
 npm install
