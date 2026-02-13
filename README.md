@@ -67,7 +67,8 @@ CSS
 
 ### Installation & Setup
 Clone the Repository
-git clone https://github.com/KolaganiReeha/smart-web-annotator.git
+git clone https://github.com/KolaganiReeha/smart-web-annotator
+
 cd smart-web-annotator
 
 ### Install Dependencies
@@ -108,6 +109,16 @@ Structured problem-solving
 UX-focused engineering
 Clean architectural thinking
 It is not just a drawing tool - it is a structured visual collaboration utility.
+
+## Architecture
+- The extension follows a state-driven rendering model:
+- Screenshot is stored via chrome.storage.
+- Annotations are stored as structured objects.
+- Canvas is re-rendered from state on every update.
+- Undo/Redo uses stack-based state history.
+- Export generates image from canvas layer.
+
+This ensures clean separation between state and rendering logic.
 
 ### Future Improvements
 AI-generated bug reports
